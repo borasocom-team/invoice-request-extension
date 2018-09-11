@@ -87,4 +87,11 @@
             </modules>
         </suite>
     </phpunit>
+    <default>
+        <customer>
+            <invoicerequest>
+                <enable_invoice_request>0</enable_invoice_request>
+            </invoicerequest>
+        </customer>
+    </default>
 </config>
