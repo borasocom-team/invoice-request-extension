@@ -43,7 +43,7 @@ class Webgriffe_InvoiceRequest_Model_Checkout_Type_Onepage extends Mage_Checkout
             $fixMessage = Mage::helper('webgriffe_invoicerequest')->__(
                 'Please, add the required information and come back to checkout to complete the purchase.'
             );
-            if (!$taxCode) {
+            if (!$companyDataMandatory && !$taxCode) {
                 $message = Mage::helper('webgriffe_invoicerequest')->__(
                     'Warning, to receive the invoice on the selected address you have to enter the Tax Code in the ' .
                     '"My Account / Default billing address" section.'
