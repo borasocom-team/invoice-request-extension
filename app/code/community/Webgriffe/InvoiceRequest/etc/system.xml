@@ -20,6 +20,31 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </enable_invoice_request>
+                        <invoice_mandatory>
+                            <label><![CDATA[Mandatory invoice]]></label>
+                            <comment><![CDATA[Choose if invoice is mandatory]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable_invoice_request>1</enable_invoice_request>
+                            </depends>
+                        </invoice_mandatory>
+                        <invoice_maximum_threshold>
+                            <label><![CDATA[Maximum threshold for mandatory invoice]]></label>
+                            <comment><![CDATA[ex. 300 (for 300€) or 400]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <invoice_mandatory>1</invoice_mandatory>
+                            </depends>
+                        </invoice_maximum_threshold>
                     </fields>
                 </invoicerequest>
             </groups>

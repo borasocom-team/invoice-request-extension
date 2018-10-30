@@ -91,6 +91,7 @@
         <customer>
             <invoicerequest>
                 <enable_invoice_request>0</enable_invoice_request>
+                <invoice_mandatory>0</invoice_mandatory>
             </invoicerequest>
         </customer>
     </default>

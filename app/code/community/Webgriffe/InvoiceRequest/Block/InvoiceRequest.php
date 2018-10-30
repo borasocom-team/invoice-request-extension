@@ -25,4 +25,20 @@ class Webgriffe_InvoiceRequest_Block_InvoiceRequest extends Mage_Core_Block_Temp
         $quote = Mage::getSingleton('checkout/session')->getQuote();
         return (bool)$quote->getInvoiceRequest();
     }
+
+    public function isMaximumThresholdExceeded () {
+        $quote = Mage::getSingleton('checkout/session')->getQuote();
+        $grandTotal = $quote->getGrandTotal();
+        $helper = Mage::helper('webgriffe_invoicerequest');
+        $maximun = $helper->getInvoiceMaximumThresold();
+        if($helper->getInvoiceMandatory() && (!empty($maximun))) {
+            if($grandTotal >= $maximun) {
+
+                return true;
+
+            }
+        }
+        return false;
+
+    }
 }
