@@ -40,6 +40,12 @@ class Webgriffe_InvoiceRequest_Model_Checkout_Type_Onepage extends Mage_Checkout
             $vatNumber = $customerAddress->getVatNumber();
             $company = $customerAddress->getCompany();
 
+            if(Mage::helper('webgriffe_taxidpro')->getIsElectronicInvoiceEnable()) {
+                $pecEmailAddress = $customerAddress->getPecEmailAddress();
+                $sdiCode = $customerAddress->getSdiCode();
+            }
+
+
             $fixMessage = Mage::helper('webgriffe_invoicerequest')->__(
                 'Please, add the required information and come back to checkout to complete the purchase.'
             );
