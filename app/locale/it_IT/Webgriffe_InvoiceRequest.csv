@@ -7,3 +7,4 @@
 "Yes","Sì"
 "No","No"
 "Suggested only to those who have a VAT id","Opzione consigliata solo ai possessori di partita IVA"
+"The invoice is mandatory for orders over %s €", "La fattura è obbligatoria per ordini superiori %s €"
