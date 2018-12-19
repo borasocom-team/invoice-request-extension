@@ -10,7 +10,7 @@ $messageAlertThresoldEceeded = $this->__('The invoice is mandatory for orders ov
     <div class="field invoice-request">
         <input type="checkbox" id="<?php echo $this->getFieldId() ?>" name="<?php echo $this->getFieldName() ?>" value="1" title="<?php echo $_label ?>" <?php if ($this->isInvoiceRequest() || ($this->isMaximumThresholdExceeded())): ?>checked="checked"<?php endif; ?> <?php if($this->isMaximumThresholdExceeded()): ?> onclick="alert('<?php echo $messageAlertThresoldEceeded; ?>'); return false;" onkeydown="return false;" <?php endif; ?> />
         <label for="<?php echo $this->getFieldId() ?>" class="required"><?php echo $_label ?>
-            <?php if ($this->isInvoiceRequest() || ($this->isMaximumThresholdExceeded())): ?>
+            <?php if ($this->isMaximumThresholdExceeded()): ?>
                 - <strong><?php echo $messageAlertThresoldEceeded; ?></strong>
             <?php endif; ?>
         </label>
